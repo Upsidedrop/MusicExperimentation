@@ -2,21 +2,20 @@ using UnityEngine;
 
 public class Curve : MonoBehaviour
 {
+
     public int range;
     public int offset;
+    float distance = 4.25f;
     private int GetCurve(float x)
     {
         float baseValue;
         float scaledValue;
-        baseValue = Mathf.PerlinNoise1D(x);
+        baseValue = Mathf.PerlinNoise1D(x * distance);
         scaledValue = baseValue * range + offset;
         return Mathf.RoundToInt(scaledValue);
     }
-    private void Start()
+    private void FixedUpdate()
     {
-        for (int i = 10; i < range; i++)
-        {
-            print(GetCurve(i + 0.1f));
-        }
+        print(GetCurve(Time.time) + (" "+ Time.time));
     }
 }
