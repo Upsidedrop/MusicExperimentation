@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Int2Note : MonoBehaviour
@@ -132,9 +133,22 @@ public class Int2Note : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    private void Update()
+    public string Convert(int input, string key)
     {
+        int aLocation;
+        string[] notes = keys[key];
+        string result;
 
+        if (notes.ToList().Contains("A"))
+        {
+            aLocation = notes.ToList().IndexOf("C");
+        }
+        else
+        {
+            aLocation = notes.ToList().IndexOf("C#");
+        }
+        result = notes[input % 7];
+        result += (int)((input + (7 - aLocation)) / 7);
+        return result;
     }
 }

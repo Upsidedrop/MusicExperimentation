@@ -2,10 +2,11 @@ using UnityEngine;
 
 public class Curve : MonoBehaviour
 {
-
+    public Int2Note Int2Note;
     public int range;
     public int offset;
-    float distance = 4.25f;
+    private float distance = 10f;
+    public float seed;
     private int GetCurve(float x)
     {
         float baseValue;
@@ -16,6 +17,10 @@ public class Curve : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        print(GetCurve(Time.time) + (" "+ Time.time));
+        int curve;
+        //just a bunch of random operators
+        curve = GetCurve(Time.time + (seed *seed /seed %seed *seed -seed));
+        print(curve + (" " + Time.time));
+        print(Int2Note.Convert(curve, "A#/Gm") + (" " + Time.time));
     }
 }
