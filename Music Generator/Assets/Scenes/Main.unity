@@ -225,8 +225,10 @@ GameObject:
   m_Component:
   - component: {fileID: 893266878}
   - component: {fileID: 893266877}
+  - component: {fileID: 893266879}
+  - component: {fileID: 893266880}
   m_Layer: 0
-  m_Name: Code Manager
+  m_Name: Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -259,6 +261,358 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &893266879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 893266876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4fb566e783367e48aa34adf31cca7ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixerGroup: {fileID: 0}
+  sounds:
+  - name: C4
+    clip: {fileID: 8300000, guid: bf6badfd40c8f9e4bb66910675f5e555, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: C5
+    clip: {fileID: 8300000, guid: 8d4334e4b76d0d447996556c925311b1, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: C6
+    clip: {fileID: 8300000, guid: 032de27e22b457648bfd3de6571c44f4, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: C#4
+    clip: {fileID: 8300000, guid: 9800fb77f3a76ab4c859d062f439fd5d, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: C#5
+    clip: {fileID: 8300000, guid: 76faf30faa5685d48ba9b431d3c6020e, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: C#6
+    clip: {fileID: 8300000, guid: 6654fd0750562a542905409b07010b41, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: D4
+    clip: {fileID: 8300000, guid: f50c62e261adf3a489ced40050cfc678, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: D5
+    clip: {fileID: 8300000, guid: 236876f09134a6a4488eb1a73cc1d4de, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: D6
+    clip: {fileID: 8300000, guid: cd237b56256abe54096836ada59dc041, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: D#4
+    clip: {fileID: 8300000, guid: 45d5100bcacb6394aa22cb04e1d5222c, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: D#5
+    clip: {fileID: 8300000, guid: 9494ff581085a404792d243802f81a04, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: D#6
+    clip: {fileID: 8300000, guid: 0b8c1408db12dd9449e825a3994370a8, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: E4
+    clip: {fileID: 8300000, guid: d003703b060c6de469433a4d99f72c6a, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: E5
+    clip: {fileID: 8300000, guid: 66b133ef9dc7af2408c534ddbe3204f7, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: E6
+    clip: {fileID: 8300000, guid: 6700261d670afc241a3662724485e973, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: F4
+    clip: {fileID: 8300000, guid: 112e9b3d411acde4c85dafa14424edf8, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: F5
+    clip: {fileID: 8300000, guid: 6a54ccd7dac6d3a4c9f82d73b99e077c, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: F6
+    clip: {fileID: 8300000, guid: 1eb080eecb34d6640bafb73cb1307319, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: F#4
+    clip: {fileID: 8300000, guid: b9415b13cea3537468ff00ba23d7827d, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: F#5
+    clip: {fileID: 8300000, guid: d52ebce93f153fd47b450437ae75dd0a, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: F#6
+    clip: {fileID: 8300000, guid: 68504b1604b2ba448aeef5aaa6b27915, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: G4
+    clip: {fileID: 8300000, guid: a14bb2bd27408fb409930344ce6b5a3b, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: G5
+    clip: {fileID: 8300000, guid: c15e4e71f6807f54b843bd504ecdb327, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: G6
+    clip: {fileID: 8300000, guid: f64a4725aedb82141a1630c97bd6e060, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: G#4
+    clip: {fileID: 8300000, guid: 7aa1928a52c906a4ebc9bd47fb18d144, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: G#5
+    clip: {fileID: 8300000, guid: d4ce6ef87aea59e4087841e3648636a3, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: G#6
+    clip: {fileID: 8300000, guid: 91bac4a96fbd24043af50973b5889fd9, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: A4
+    clip: {fileID: 8300000, guid: 0cd4f7276178e494bb3f217105b82afd, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: A5
+    clip: {fileID: 8300000, guid: ce40f1232df92bf4db29c904e3628f5a, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: A6
+    clip: {fileID: 8300000, guid: f00a5e52752affb43b00ad3a10c72ff3, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: A#4
+    clip: {fileID: 8300000, guid: a2c924f2317a28c48bc5ca9bb5a40b72, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: A#5
+    clip: {fileID: 8300000, guid: 3c8a61e464e475a4dbf3be1c3ea0ea8f, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: A#6
+    clip: {fileID: 8300000, guid: 2f039f2d67c1d7e42babab694e6ed52b, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: B4
+    clip: {fileID: 8300000, guid: da94fbcfb2d7d7b43a1114e05cb2baf3, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: B5
+    clip: {fileID: 8300000, guid: f186048a7c111f24e830f06bbb17ea3a, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+  - name: B6
+    clip: {fileID: 8300000, guid: b853bb147f90efa429e78e2c166b1ef2, type: 3}
+    volume: 1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 0}
+    source: {fileID: 0}
+--- !u!114 &893266880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 893266876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e54e55d837eab904eb89e91e4135fef7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bpm: 60
+  Curve: {fileID: 1698584954}
 --- !u!1 &1698584953
 GameObject:
   m_ObjectHideFlags: 0
@@ -292,6 +646,7 @@ MonoBehaviour:
   range: 16
   offset: 24
   seed: 2
+  melody: []
 --- !u!4 &1698584955
 Transform:
   m_ObjectHideFlags: 0

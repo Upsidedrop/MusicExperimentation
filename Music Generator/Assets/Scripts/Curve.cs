@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Curve : MonoBehaviour
@@ -5,8 +6,10 @@ public class Curve : MonoBehaviour
     public Int2Note Int2Note;
     public int range;
     public int offset;
-    private float distance = 10f;
+    private float distance = 90f;
     public float seed;
+    public List<string> melody = new List<string>();
+
     private int GetCurve(float x)
     {
         float baseValue;
@@ -15,12 +18,17 @@ public class Curve : MonoBehaviour
         scaledValue = baseValue * range + offset;
         return Mathf.RoundToInt(scaledValue);
     }
-    private void FixedUpdate()
+    private void Update()
     {
-        int curve;
-        //just a bunch of random operators
-        curve = GetCurve(Time.time + (seed *seed /seed %seed *seed -seed));
-        print(curve + (" " + Time.time));
-        print(Int2Note.Convert(curve, "A#/Gm") + (" " + Time.time));
+
+        if (Input.GetKey(KeyCode.Space))
+        {
+            int curve;
+            //just a bunch of random operators
+            curve = GetCurve(Time.time + (seed * seed / seed % seed * seed - seed));
+            print("mouseDown");
+            melody.Add(Int2Note.Convert(curve, "G#/Fm"));
+        }
     }
+
 }

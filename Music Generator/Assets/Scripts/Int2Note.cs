@@ -151,4 +151,5 @@ public class Int2Note : MonoBehaviour
         result += (int)((input + (7 - aLocation)) / 7);
         return result;
     }
+
 }
