@@ -12,6 +12,7 @@ public class Curve : MonoBehaviour
     private float position = 1234.5678f;
     private int currentBeat = 0;
     public int beatPerMeasure;
+    public string[] chordProgression;
     private int GetCurve(float x)
     {
         float baseValue;
