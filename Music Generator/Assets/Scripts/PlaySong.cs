@@ -14,8 +14,9 @@ public class PlaySong : MonoBehaviour
     private IEnumerator StartMusic(string[] song)
     {
         AudioManager.Play(song[beat]);
-        yield return new WaitForSeconds(60 / bpm);
-        if (beat == song.Length)
+        print(song[beat]);
+        yield return new WaitForSeconds(0.5f);
+        if (beat == song.Length - 1)
         {
             beat = 0;
         }

@@ -22,113 +22,141 @@ public class Int2Note : MonoBehaviour
         });
         keys.Add("A#/Gm", new string[]
         {
-            "A#",
-            "C",
-            "D",
-            "D#",
-            "F",
-            "G",
-            "A"
+            "A",
+                        "A#",
+                        "C",
+                        "D",
+                        "D#",
+                        "F",
+                        "G",
         });
         keys.Add("B/G#m", new string[]
         {
-            "B",
-            "C#",
-            "D#",
-            "E",
-            "F#",
-            "G#",
-            "A#"
+
+
+
+
+
+
+            "A#",
+                        "B",
+                        "C#",
+                        "D#",
+                        "E",
+                        "F#",
+                        "G#",
         });
         keys.Add("C/Am", new string[]
         {
-            "C",
-            "D",
-            "E",
-            "F",
-            "G",
+
+
+
+
+
             "A",
-            "B"
+            "B",
+                        "C",
+                        "D",
+                        "E",
+                        "F",
+                        "G",
         });
         keys.Add("C#/A#m", new string[]
         {
-            "C#",
-            "D#",
-            "F",
-            "F#",
-            "G#",
+
+
+
+
+
             "A#",
-            "C"
+            "C",
+                        "C#",
+                        "D#",
+                        "F",
+                        "F#",
+                        "G#",
         });
         keys.Add("D/Bm", new string[]
         {
-            "D",
+
+            "A",
+            "B",
+            "C#",
+                        "D",
             "E",
             "F#",
             "G",
-            "A",
-            "B",
-            "C#"
         });
         keys.Add("D#/Cm", new string[]
         {
-            "D#",
-            "F",
-            "G",
-            "G#",
+
+
+
+
             "A#",
             "C",
-            "D"
+            "D",
+               "D#",
+               "F",
+               "G",
+               "G#",
         });
         keys.Add("E/C#m", new string[]
         {
-            "E",
-            "F#",
-            "G#",
+
             "A",
             "B",
             "C#",
-            "D#"
+            "D#",
+                        "E",
+            "F#",
+            "G#",
         });
         keys.Add("F/Dm", new string[]
         {
-            "F",
-            "G",
+
+
             "A",
             "A#",
             "C",
             "D",
-            "E"
+            "E",
+             "F",
+             "G",
         });
         keys.Add("F#/D#m", new string[]
         {
-            "F#",
-            "G#",
+
+
             "A#",
             "B",
             "C#",
             "D#",
-            "F"
+            "F",
+              "F#",
+              "G#",
         });
         keys.Add("G/Em", new string[]
         {
-            "G",
+
             "A",
             "B",
             "C",
             "D",
             "E",
-            "F#"
+            "F#",
+            "G",
         });
         keys.Add("G#/Fm", new string[]
         {
-            "G#",
+
             "A#",
             "C",
             "C#",
             "D#",
             "F",
-            "G"
+            "G",
+             "G#",
         });
 
     }
@@ -139,7 +167,7 @@ public class Int2Note : MonoBehaviour
         string[] notes = keys[key];
         string result;
 
-        if (notes.ToList().Contains("A"))
+        if (notes.ToList().Contains("C"))
         {
             aLocation = notes.ToList().IndexOf("C");
         }

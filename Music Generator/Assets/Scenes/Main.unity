@@ -611,7 +611,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e54e55d837eab904eb89e91e4135fef7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bpm: 60
+  bpm: 100
   Curve: {fileID: 1698584954}
 --- !u!1 &1698584953
 GameObject:
@@ -644,9 +644,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Int2Note: {fileID: 893266877}
   range: 16
-  offset: 24
-  seed: 2
+  offset: 26
+  seed: 0
   melody: []
+  beatPerMeasure: 4
+  chordProgression:
+  - D/Bm
+  - G/Em
+  - A/F#m
+  - D/Bm
 --- !u!4 &1698584955
 Transform:
   m_ObjectHideFlags: 0
