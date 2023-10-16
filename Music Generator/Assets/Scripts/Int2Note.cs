@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Int2Note : MonoBehaviour
 {
-    private Dictionary<string, string[]> keys =
+    public Dictionary<string, string[]> keys =
         new();
 
     // Start is called before the first frame update
