@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using TMPro;
+using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -19,6 +20,9 @@ public class Curve : MonoBehaviour
     public TMP_InputField seedInput;
     public TMP_InputField progressionInput;
     public TMP_Text keyInput;
+    private string trueKey;
+    public TMP_Text mode;
+    List<string> orderedKey = new();
     private int GetCurve(float x)
     {
         float baseValue;
@@ -29,18 +33,14 @@ public class Curve : MonoBehaviour
     }
     public void Generate()
     {
-        if (seedInput.text.NullIfEmpty() == null)
+        RandoSeed();
+        MajorOrMinor();
+        OrderKey();
+        if (progressionInput.text == string.Empty)
         {
-            seed = UnityEngine.Random.value * 100 * UnityEngine.Random.value * 42;
+            progressionInput.text = 1451.ToString();
         }
-        else
-        {
-            seed = float.Parse(seedInput.text);
-        }
-        for (int i = 0; i < progressionInput.text.Length; i++)
-        {
-
-        }
+        CreateChordProgression();
         for (int i = 0; i < measures * beatsPerMeasure; i++)
         {
             string currentChord;
@@ -54,6 +54,98 @@ public class Curve : MonoBehaviour
             melody.Add(Int2Note.Convert(curve, currentChord));
             position += distance;
             currentBeat++;
+        }
+    }
+    void MajorOrMinor()
+    {
+        trueKey = string.Empty;
+        if (mode.text == "Major")
+        {
+            foreach (char letter in keyInput.text)
+            {
+                if (letter == '/')
+                {
+                    break;
+                }
+                trueKey += letter;
+            }
+        }
+        else
+        {
+            bool passedSlash = false;
+            foreach (char letter in keyInput.text)
+            {
+                if (letter == '/')
+                {
+                    passedSlash = true;
+                    continue;
+                }
+                if (!passedSlash)
+                {
+                    continue;
+                }
+                if(letter == 'm')
+                {
+                    break;
+                }
+                trueKey += letter;
+            }
+        }
+        print(trueKey);
+        
+    }
+    void RandoSeed()
+    {
+        if (seedInput.text.NullIfEmpty() == null)
+        {
+            seed = UnityEngine.Random.value * 100 * UnityEngine.Random.value * 42;
+        }
+        else
+        {
+            seed = float.Parse(seedInput.text);
+        }
+    }
+    void OrderKey()
+    {
+        orderedKey.Clear();
+        bool passedNote = false;
+        foreach(string note in Int2Note.keys[keyInput.text])
+        {
+            if (note == trueKey)
+            {
+                passedNote = true;
+            }
+            if (!passedNote)
+            {
+                continue;
+            }
+            orderedKey.Add(note);
+            print(note);
+        }
+        foreach (string note in Int2Note.keys[keyInput.text])
+        {
+            if (note == trueKey)
+            {
+                break;
+            }
+            orderedKey.Add(note);
+            print(note);
+        }
+    }
+    void CreateChordProgression()
+    {
+        chordProgression = new string[progressionInput.text.Length];
+        for (int i = 0; i < progressionInput.text.Length; i++)
+        {
+            chordProgression[i] = orderedKey[int.Parse(progressionInput.text[i].ToString()) -1];
+            foreach (string key in Int2Note.keys.Keys)
+            {
+                if (key.Remove(chordProgression[i].Length) == chordProgression[i])
+                {
+                    chordProgression[i] = key;
+                    break;
+                }
+            }
         }
     }
 }
